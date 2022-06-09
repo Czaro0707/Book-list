@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Book from "../components/ui/book";
 import Header from "../components/header/header";
-import styles from "../styles/home.module.css";
 import { useEffect, useState } from "react";
 
 const URI = "https://gnikdroy.pythonanywhere.com/api/book/?format=json";
@@ -39,7 +38,7 @@ export default function Home() {
         setIsFavoriteBooks={setIsFavoriteBooks}
         inputHandler={inputHandler}
       />
-      <div className={styles.home}>
+      <div className="home">
         {books.map((book, index) => (
           <Book
             book={book}
